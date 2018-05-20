@@ -51,7 +51,7 @@ void setup() {
 
   Serial.println("Initialized");
   display.clearDisplay();
-  display.drawBitmap(0, 0, tas_logo, 24, 34, WHITE);
+  display.drawBitmap(52, 0, tas_logo, 24, 35, WHITE);
   display.display();
   return;
 
