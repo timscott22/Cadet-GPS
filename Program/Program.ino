@@ -9,9 +9,6 @@ bool lastFrame = true;
 
 static const unsigned char PROGMEM tas_logo[] = {
   B00000000, B00011000, B00000000,
-  B00000000, B00111100, B00000000,
-  B00000000, B00011000, B00000000,
-  B00000000, B00011000, B00000000,
   B00000000, B00100100, B00000000,
   B00000000, B00100100, B00000000,
   B00000000, B01011010, B00000000,
@@ -28,8 +25,8 @@ static const unsigned char PROGMEM tas_logo[] = {
   B00100100, B10111101, B00100100,
   B00010000, B00111100, B00001000,
   B00011111, B11111111, B11111000,
-  B00011111, B11100111, B11111000,
-  B00011111, B11100111, B11111000,
+  B00011001, B11100111, B10011000,
+  B00011001, B11100111, B10011000,
   B00111111, B11111111, B11111100,
   B00100000, B00111100, B00000100,
   B00100000, B00100100, B00000100,
@@ -53,7 +50,6 @@ void setup() {
   display.clearDisplay();
   display.drawBitmap(52, 0, tas_logo, 24, 35, WHITE);
   display.display();
-  return;
 
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -75,7 +71,6 @@ bool getButton() {
 }
 
 void loop() {
-  return;
   if (getButton() && !lastFrame) {
     display.clearDisplay();
     printSplash();
